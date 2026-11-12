@@ -1,31 +1,236 @@
-.App {
-  text-align: center;
+
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f6fa;
+  color: #202333;
 }
 
-.App-header {
-  background-color: #282c34;
+button, input, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+.jp-app {
   min-height: 100vh;
+}
+
+.jp-header {
+  background: #171923;
+  color: white;
+  padding: 20px 5%;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+
+.jp-header h1 {
+  margin: 0;
+  letter-spacing: 3px;
+}
+
+.jp-header small {
+  color: #d5ad63;
+  letter-spacing: 2px;
+}
+
+.jp-cart {
+  font-size: 20px;
+}
+
+.jp-nav {
+  background: white;
+  display: flex;
+  gap: 8px;
+  padding: 12px 4%;
+  overflow-x: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.jp-nav button {
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  padding: 12px;
+  white-space: nowrap;
+}
+
+.jp-nav button.active {
+  background: #171923;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.jp-main {
+  max-width: 1150px;
+  margin: auto;
+  padding: 24px 16px;
+  min-height: 75vh;
 }
 
-.heart {
-  color: #ff0000;
+.jp-banner {
+  background: linear-gradient(120deg, #171923, #34394c);
+  color: white;
+  padding: 38px 24px;
+  border-radius: 14px;
+  margin-bottom: 24px;
 }
 
-.small {
-  font-size: 0.75rem;
+.jp-banner h2 {
+  color: #e4bc70;
+  font-size: 28px;
+}
+
+.jp-search, .jp-form input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 7px 0;
+  background: white;
+}
+
+.jp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.jp-card, .jp-panel {
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 2px 10px #0000000a;
+  margin-bottom: 16px;
+}
+
+.jp-product-icon {
+  background: #f2eee7;
+  height: 110px;
+  display: grid;
+  place-items: center;
+  font-size: 45px;
+  border-radius: 8px;
+}
+
+.jp-card h3 {
+  min-height: 42px;
+}
+
+.jp-card strong {
+  display: block;
+  color: #9b702b;
+  margin: 12px 0;
+}
+
+.jp-card small {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.jp-card button, .jp-panel button, .jp-form button {
+  background: #171923;
+  color: white;
+  border: 0;
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+.jp-form {
+  display: grid;
+  gap: 8px;
+}
+
+.jp-row, .jp-stock {
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.jp-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.jp-row button {
+  background: #b73535;
+}
+
+.jp-stock label {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.jp-stock input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-top: 5px;
+}
+
+.jp-panel select {
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.jp-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.jp-stats div {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px #0000000a;
+}
+
+.jp-stats strong {
+  display: block;
+  margin-top: 12px;
+  color: #9b702b;
+  overflow-wrap: anywhere;
+}
+
+footer {
+  background: #171923;
+  color: #ddd;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  .jp-header h1 {
+    font-size: 23px;
+  }
+
+  .jp-banner h2 {
+    font-size: 22px;
+  }
+
+  .jp-main {
+    padding: 16px 12px;
+  }
+
+  .jp-nav button {
+    font-size: 13px;
+    padding: 10px;
+  }
 }
